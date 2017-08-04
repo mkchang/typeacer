@@ -1,0 +1,19 @@
+{
+  "name": "typeacer",
+  "version": "1.0.0",
+  "description": "Helping you ace your typing and increase your words per minute",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkchang/hrsf80-mvp.git"
+  },
+  "author": "Martin K Chang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkchang/hrsf80-mvp/issues"
+  },
+  "homepage": "https://github.com/mkchang/hrsf80-mvp#readme"
+}
