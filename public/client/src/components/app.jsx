@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class App {
   render() {
     return (
-      <div>App</div>
+      <div>
+        App
+      </div>
     );
   }
 }

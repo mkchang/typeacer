@@ -4,6 +4,7 @@
   "description": "Helping you ace your typing and increase your words per minute",
   "main": "index.js",
   "scripts": {
+    "build": "babel ./public/client/src -d ./public/client/compiled",
     "start": "npm start",
     "test": "npm test"
   },
@@ -20,5 +21,15 @@
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.24.1"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   }
 }
