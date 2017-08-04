@@ -4,8 +4,8 @@
   "description": "Helping you ace your typing and increase your words per minute",
   "main": "index.js",
   "scripts": {
-    "build": "babel ./public/client/src -d ./public/client/compiled",
-    "start": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.config.js",
+    "start": "",
     "test": "npm test"
   },
   "repository": {
