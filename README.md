@@ -8,8 +8,8 @@
 ## Todo List ##
 ### MVP ###
 - [ ] Shows a random text prompt from an API
-- [ ] Has a text box for user input to copy the prompt
-- [ ] After completing prompt, shows your wpm
+- [x] Has a text box for user input to copy the prompt
+- [x] After completing prompt, shows your wpm
 - [ ] Saves user's wpm with the specific prompt to a DB
 
 ### Advanced Content ###

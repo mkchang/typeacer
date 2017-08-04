@@ -5,10 +5,12 @@ class Status extends React.Component {
   render() {
     return (
       <div>
-        {`Started: ${this.props.started.toString()}`}
+          {`Results: ${this.props.wpm} words per minute!`}
       </div>
     );
   }
 }
 
 export default Status;
+
+// {`Started: ${this.props.started.toString()}`}
