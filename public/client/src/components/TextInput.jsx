@@ -5,23 +5,12 @@ class TextInput extends React.Component {
     super(props);
     this.state = {
       value: '',
-      started: false,
-      startTime: 0,
-      endTime: 0
     };
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event) {
-    if (this.state.stated) {
-    } else {
-      this.setState({
-        started: true,
-        startTime: Date.now()
-      });
-    }
     this.setState({value: event.target.value});
-
   }
 
   render() {
@@ -33,7 +22,10 @@ class TextInput extends React.Component {
           id="textarea" 
           placeholder="Start typing here!"
           value={this.state.value}
-          onChange={this.handleChange}>
+          onChange={e => {
+            this.handleChange(e);
+            this.props.handleTextInput(e);
+          }}>
         </textarea>
       </div>
     );
