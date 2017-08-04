@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/mkchang/hrsf80-mvp#readme",
   "dependencies": {
+    "express": "^4.15.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
