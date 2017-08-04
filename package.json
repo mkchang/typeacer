@@ -4,6 +4,7 @@
   "description": "Helping you ace your typing and increase your words per minute",
   "main": "index.js",
   "scripts": {
+    "start": "npm start",
     "test": "npm test"
   },
   "repository": {
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/mkchang/hrsf80-mvp/issues"
   },
-  "homepage": "https://github.com/mkchang/hrsf80-mvp#readme"
+  "homepage": "https://github.com/mkchang/hrsf80-mvp#readme",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
 }
