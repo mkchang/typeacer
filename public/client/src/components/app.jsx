@@ -1,6 +1,7 @@
 import React from 'react';
-import TextPrompt from './TextPrompt.jsx'
-import TextInput from './TextInput.jsx'
+import TextPrompt from './TextPrompt.jsx';
+import TextInput from './TextInput.jsx';
+import Status from './Status.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,23 +11,31 @@ class App extends React.Component {
       startTime: 0,
       endTime: 0,
       textInput: '',
-      textPrompt: 'Once you eliminate the impossible, whatever remains, no matter how improbable, must be the truth.'
+      textPrompt: 'Once you eliminate the impossible'
     }
     this.handleTextInput = this.handleTextInput.bind(this);
   }
 
   handleTextInput(e) {
     console.log(e.target.value);
-    // this.setState({textInput: e.target.value});
-    // if (this.state.stated) {
-    // } else {
-    //   this.setState({
-    //     started: true,
-    //     startTime: Date.now()
-    //   });
-    // }
-    // if (event.target.value === )
-    // this.setState({value: event.target.value});
+    this.setState({textInput: e.target.value}, () => {
+      if (this.state.started) {
+        if (this.state.textInput === this.state.textPrompt) {
+          console.log('Finished!');
+          this.setState({
+            started: false,
+            endTime: Date.now()
+          }, () => {
+            console.log(`Time taken: ${(this.state.endTime - this.state.startTime) / 1000 }s`)
+          });
+        }
+      } else {
+        this.setState({
+          started: true,
+          startTime: Date.now()
+        });
+      }
+    });
   }
 
   render() {
@@ -38,6 +47,9 @@ class App extends React.Component {
       </div>
       <div>
         <TextInput handleTextInput={this.handleTextInput}/>
+      </div>
+      <div>
+        <Status started={this.state.started} />
       </div>
       </div>
     );
