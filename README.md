@@ -19,7 +19,13 @@
 - [ ] Shows leaderboard of user wpm by prompt
 - [ ] Has a Flying Ace icon move across as you type
 
-## Press Release
+## Setup ##
+- `npm install`
+- `npm run build`
+- `mongod`
+- `npm start`
+
+## Press Release ##
 
 ### Heading ###
   > TypeAcer
