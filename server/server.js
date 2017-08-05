@@ -39,14 +39,10 @@ app.post('/results', function(req, res, next) {
   })
   .catch((result) => {
     if (wpm > result.wpm) {
-      result.update({wpm: wpm}, (err, result) => {
+      result.update({wpm: wpm}, (err) => {
         if (err) throw err;
-        console.log('updated: ', result);
-        result.save((err, result) => {
-          if (err) throw err;
-          console.log('saved updated result: ', result);
-          res.sendStatus(201);
-        })
+        console.log(`updated ${result.quote} to faster wpm: ${wpm}`);
+        res.sendStatus(201);
       })
     }
   })

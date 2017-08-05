@@ -12,13 +12,15 @@
 - [x] After completing prompt, shows your wpm
 - [x] Saves user's wpm with the specific prompt to a DB
 - [x] Can reset page with a new quote to attempt
-- [ ] Updates wpm with new best
+- [x] Updates wpm with new best
 - [ ] Shows you if you make a mistake
+- [ ] Shows the record fastest wpm for that quote
 
 ### Advanced Content ###
 - [ ] Saves and shows you your most common errors
-- [ ] Shows leaderboard of user wpm by prompt
 - [ ] Has a Flying Ace icon move across as you type
+- [ ] Has user login
+- [ ] Shows leaderboard of user wpm by prompt
 
 ## Setup ##
 - `npm install`
