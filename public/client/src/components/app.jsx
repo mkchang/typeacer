@@ -2,6 +2,7 @@ import React from 'react';
 import TextPrompt from './TextPrompt.jsx';
 import TextInput from './TextInput.jsx';
 import Status from './Status.jsx';
+import ErrorFlag from './ErrorFlag.jsx';
 import $ from 'jquery';
 
 class App extends React.Component {
@@ -14,7 +15,8 @@ class App extends React.Component {
       secondsElapsed: 0,
       textInput: '',
       textPrompt: {},
-      wpm: 0
+      wpm: 0,
+      error: false
     }
     this.handleTextInput = this.handleTextInput.bind(this);
   }
@@ -49,6 +51,12 @@ class App extends React.Component {
               this.sendResults();
             });
           });
+        } else if (this.state.textInput !== this.state.textPrompt.quote.slice(0, this.state.textInput.length)) {
+          this.flagError();
+        } else if (this.state.error) {
+          this.setState({
+            error: false
+          });
         }
       } else {
         this.setState({
@@ -57,6 +65,12 @@ class App extends React.Component {
         });
         console.log('started');
       }
+    });
+  }
+
+  flagError() {
+    this.setState({
+      error: true
     });
   }
 
@@ -84,6 +98,9 @@ class App extends React.Component {
         <h1>TypeAcer</h1>
       <div>
         <TextPrompt textPrompt={this.state.textPrompt.quote} />
+      </div>
+      <div>
+        <ErrorFlag error={this.state.error} />
       </div>
       <div>
         <TextInput handleTextInput={this.handleTextInput}/>
