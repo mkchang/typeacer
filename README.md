@@ -15,6 +15,7 @@
 - [x] Updates wpm with new best
 - [x] Shows you if you make a mistake
 - [x] Handles single and double quotes in the quote string
+- [x] Only passes clean quotes to client
 - [ ] Shows the record fastest wpm for that quote
 
 ### Advanced Content ###
@@ -28,6 +29,10 @@
 - `npm run build`
 - `mongod`
 - `npm start`
+
+Default quote API is from [Storm Consultancy](http://quotes.stormconsultancy.co.uk). 
+Note: this is not a "clean" set of quotes, so npm package [swearjar](https://www.npmjs.com/package/swearjar) is used. 
+Note 2: depending on your tastes, this may not be a fully inclusive list of profanity, see swearjar docs on editing the default list or providing your own.
 
 ## Press Release ##
 

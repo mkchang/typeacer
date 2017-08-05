@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(express.static('./public/client'));
 
 app.get('/textPrompt', function(req, res, next) {
-  utils.getQuote((data) => {
+  utils.getCleanQuote((data) => {
     res.status(200).send({quote: data.quote, words: data.words})
     next();
   });
