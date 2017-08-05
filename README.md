@@ -10,11 +10,12 @@
 - [x] Shows a random text prompt from an API
 - [x] Has a text box for user input to copy the prompt
 - [x] After completing prompt, shows your wpm
-- [ ] Saves user's wpm with the specific prompt to a DB
-- [ ] Can reset page with a new quote to attempt
+- [x] Saves user's wpm with the specific prompt to a DB
+- [x] Can reset page with a new quote to attempt
+- [ ] Updates wpm with new best
+- [ ] Shows you if you make a mistake
 
 ### Advanced Content ###
-- [ ] Shows you if you make a mistake
 - [ ] Saves and shows you your most common errors
 - [ ] Shows leaderboard of user wpm by prompt
 - [ ] Has a Flying Ace icon move across as you type
