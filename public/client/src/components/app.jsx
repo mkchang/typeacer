@@ -16,7 +16,8 @@ class App extends React.Component {
       textInput: '',
       textPrompt: {},
       wpm: 0,
-      error: false
+      error: false,
+      record: null
     }
     this.handleTextInput = this.handleTextInput.bind(this);
   }
@@ -85,6 +86,9 @@ class App extends React.Component {
       contentType: 'application/json',
       success: (data) => {
         console.log('POST success: ', data);
+        this.setState({
+            record: data.wpm
+          });
       },
       error: (err) => {
         console.log('POST /sendResults failed ', err);
@@ -107,7 +111,7 @@ class App extends React.Component {
         <TextInput handleTextInput={this.handleTextInput}/>
       </div>
       <div>
-        <Status started={this.state.started} wpm={this.state.wpm} />
+        <Status started={this.state.started} wpm={this.state.wpm} record={this.state.record} />
       </div>
       </div>
     );

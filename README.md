@@ -16,10 +16,11 @@
 - [x] Shows you if you make a mistake
 - [x] Handles single and double quotes in the quote string
 - [x] Only passes clean quotes to client
-- [ ] Shows the record fastest wpm for that quote
+- [x] Shows the record fastest wpm for that quote
 
 ### Advanced Content ###
 - [ ] Saves and shows you your most common errors
+- [ ] Randomly chooses between existing quotes and new ones
 - [ ] Has a Flying Ace icon move across as you type
 - [ ] Has user login
 - [ ] Shows leaderboard of user wpm by prompt

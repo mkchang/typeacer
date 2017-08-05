@@ -4,8 +4,6 @@ var bodyParser = require('body-parser');
 var db = require('./db/index').db;
 var Result = require('./db/index').Result;
 
-//testing
-
 var app = express();
 
 app.use(bodyParser.json());
@@ -16,6 +14,8 @@ app.get('/textPrompt', function(req, res, next) {
     res.status(200).send({quote: data.quote, words: data.words})
     next();
   });
+  // res.status(200).send({quote: 'This is a test', words: 4});
+  // next();
 });
 
 app.post('/results', function(req, res, next) {
@@ -32,7 +32,7 @@ app.post('/results', function(req, res, next) {
     result.save((err, result) => {
       if (err) throw err;
       console.log('saved new result: ', result);
-      res.sendStatus(201);
+      res.status(201).send({wpm: wpm});
     });
   })
   .error((err) => {
@@ -44,8 +44,10 @@ app.post('/results', function(req, res, next) {
       result.update({wpm: wpm}, (err) => {
         if (err) throw err;
         console.log(`updated ${result.quote} to faster wpm: ${wpm}`);
-        res.sendStatus(201);
+        res.status(201).send({wpm: wpm});
       })
+    } else {
+      res.status(201).send({wpm: result.wpm});
     }
   })
 })

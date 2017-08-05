@@ -15,9 +15,6 @@ module.exports.getQuote = (callback) => {
 };
 
 module.exports.getCleanQuote = (callback) => {
-  var cleanData;
-  var clean;
-  
   var cleanLoop = () => {
     module.exports.getQuote((data) => {
       if (swearjar.profane(data.quote)) {
