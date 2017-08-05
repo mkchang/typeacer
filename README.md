@@ -46,4 +46,6 @@
   > "I used to give up typing because I was too slow, but now I'm so fast, I've reached the theoretical speed limits of USB!" - Ace Typer
 
 ### Closing and Call to Action ###
-  > Click [here](127.0.0.1/typeacer) to get started!
+  > Click [here](127.0.0.1/typeacer) to get started! For other challenges, check out our other products: 
+  > TypeSpacer: A typing experience that's out of this world!
+  > TypeLaser: Hone your typing with laser precision!
