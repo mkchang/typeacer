@@ -7,10 +7,11 @@
 
 ## Todo List ##
 ### MVP ###
-- [ ] Shows a random text prompt from an API
+- [x] Shows a random text prompt from an API
 - [x] Has a text box for user input to copy the prompt
 - [x] After completing prompt, shows your wpm
 - [ ] Saves user's wpm with the specific prompt to a DB
+- [ ] Can reset page with a new quote to attempt
 
 ### Advanced Content ###
 - [ ] Shows you if you make a mistake
