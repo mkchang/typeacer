@@ -2,6 +2,7 @@ import React from 'react';
 import TextPrompt from './TextPrompt.jsx';
 import TextInput from './TextInput.jsx';
 import Status from './Status.jsx';
+import $ from 'jquery';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,10 +13,27 @@ class App extends React.Component {
       endTime: 0,
       secondsElapsed: 0,
       textInput: '',
-      textPrompt: {text: 'Once you eliminate the impossible', words: 5},
+      textPrompt: {},
       wpm: 0
     }
     this.handleTextInput = this.handleTextInput.bind(this);
+  }
+
+  componentDidMount() {
+    console.log('componentDidMount');
+    $.ajax({
+      url: '/textPrompt',
+      success: (data) => {
+        console.log('success', data);
+        this.setState({
+          textPrompt: data
+        })
+      },
+      error: (err) => {
+        console.log('err', err);
+      }
+
+    })
   }
 
   handleTextInput(e) {
