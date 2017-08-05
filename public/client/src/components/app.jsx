@@ -24,15 +24,13 @@ class App extends React.Component {
     $.ajax({
       url: '/textPrompt',
       success: (data) => {
-        console.log('success', data);
         this.setState({
           textPrompt: data
         })
       },
       error: (err) => {
-        console.log('err', err);
+        console.log('GET /textPrompt failed ', err);
       }
-
     })
   }
 

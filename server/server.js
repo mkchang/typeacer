@@ -7,7 +7,6 @@ app.use(express.static('./public/client'));
 
 app.get('/textPrompt', function(req, res, next) {
   utils.getQuote((data) => {
-    console.log(data);
     res.status(200).send({text: data.quote, words: data.words})
     next();
   });
