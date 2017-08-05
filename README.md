@@ -14,7 +14,7 @@
 - [x] Can reset page with a new quote to attempt
 - [x] Updates wpm with new best
 - [x] Shows you if you make a mistake
-- [ ] Handles single and double quotes in the quote string
+- [x] Handles single and double quotes in the quote string
 - [ ] Shows the record fastest wpm for that quote
 
 ### Advanced Content ###
