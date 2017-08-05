@@ -44,7 +44,7 @@ class App extends React.Component {
           }, () => {
             this.setState({
               secondsElapsed: (this.state.endTime - this.state.startTime) / 1000,
-              wpm: this.state.textPrompt.words / ((this.state.endTime - this.state.startTime) / 60000)
+              wpm: Math.round(this.state.textPrompt.words / ((this.state.endTime - this.state.startTime) / 60000))
             }, () => {
               this.sendResults();
             });
