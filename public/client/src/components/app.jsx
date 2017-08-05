@@ -65,7 +65,7 @@ class App extends React.Component {
       url: '/results',
       method: 'POST',
       data: JSON.stringify({
-        textPrompt: this.state.textPrompt.quote,
+        quote: this.state.textPrompt.quote,
         wpm: this.state.wpm
       }),
       contentType: 'application/json',
