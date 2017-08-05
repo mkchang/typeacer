@@ -20,7 +20,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log('componentDidMount');
     $.ajax({
       url: '/textPrompt',
       success: (data) => {
@@ -37,7 +36,7 @@ class App extends React.Component {
   handleTextInput(e) {
     this.setState({textInput: e.target.value}, () => {
       if (this.state.started) {
-        if (this.state.textInput === this.state.textPrompt.text) {
+        if (this.state.textInput === this.state.textPrompt.quote) {
           console.log('Finished!');
           this.setState({
             started: false,
@@ -46,6 +45,8 @@ class App extends React.Component {
             this.setState({
               secondsElapsed: (this.state.endTime - this.state.startTime) / 1000,
               wpm: this.state.textPrompt.words / ((this.state.endTime - this.state.startTime) / 60000)
+            }, () => {
+              this.sendResults();
             });
           });
         }
@@ -59,12 +60,30 @@ class App extends React.Component {
     });
   }
 
+  sendResults() {
+    $.ajax({
+      url: '/results',
+      method: 'POST',
+      data: JSON.stringify({
+        textPrompt: this.state.textPrompt.quote,
+        wpm: this.state.wpm
+      }),
+      contentType: 'application/json',
+      success: (data) => {
+        console.log('POST success: ', data);
+      },
+      error: (err) => {
+        console.log('POST /sendResults failed ', err);
+      }
+    })
+  }
+
   render() {
     return (
       <div>
         <h1>TypeAcer</h1>
       <div>
-        <TextPrompt textPrompt={this.state.textPrompt.text} />
+        <TextPrompt textPrompt={this.state.textPrompt.quote} />
       </div>
       <div>
         <TextInput handleTextInput={this.handleTextInput}/>
