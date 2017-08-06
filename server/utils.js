@@ -8,10 +8,15 @@ module.exports.getQuote = (callback) => {
       throw err;
     }
     var data = JSON.parse(body);
-    data.quote = unidecode(data.quote);
+    data.quote = unidecode(data.quote).replace(/  /i, ' ');
     data.words = module.exports.countWords(data.quote);
     callback(data);
   })
+  // // Testing without API
+  // var data = {};
+  // data.quote = unidecode('Double space  there.').replace(/  /i, ' ');
+  // data.words = module.exports.countWords(data.quote);
+  // callback(data);
 };
 
 module.exports.getCleanQuote = (callback) => {

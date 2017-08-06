@@ -20,13 +20,16 @@
 
 ### Advanced Content ###
 - [x] Add reactstrap for styling
-- [ ] Saves and shows you your most common errors
+- [x] bugs: double spaces are not obvious
+- [x] bugs: swearjar list reset
 - [ ] Add a reset button
+- [ ] Saves and shows you your most common errors
 - [ ] Randomly chooses between existing quotes and new ones, defaults to old quotes if an unclean quote is found?
 - [ ] Add keystrokes per minute
 - [ ] Has a Flying Ace icon move across as you type
 - [ ] Has user login
 - [ ] Shows leaderboard of user wpm by prompt
+- [ ] ~~bugs: enter key~~ not a bug, just counts as a wrong keystroke, can be deleted
 
 ## Setup ##
 - `npm install`
