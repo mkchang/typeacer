@@ -19,7 +19,7 @@
 - [x] Shows the record fastest wpm for that quote
 
 ### Advanced Content ###
-- [ ] Add bootstrap for styling
+- [x] Add reactstrap for styling
 - [ ] Saves and shows you your most common errors
 - [ ] Randomly chooses between existing quotes and new ones, defaults to old quotes if an unclean quote is found?
 - [ ] Add keystrokes per minute as well

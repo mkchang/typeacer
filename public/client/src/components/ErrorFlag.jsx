@@ -1,15 +1,16 @@
 import React from 'react';
+import { Alert } from 'reactstrap';
 
 class ErrorFlag extends React.Component {
   render() {
     var errorState;
     if (this.props.error) {
       errorState = (
-        <p className="error">Error! Check spelling!</p>
+        <Alert color="danger">Error! Check spelling!</Alert>
       );
     } else {
       errorState = (
-        <p className="noError">No mistakes, keep going!</p>
+        <Alert color="success">No mistakes yet, keep going!</Alert>
       );
     }
     return errorState;

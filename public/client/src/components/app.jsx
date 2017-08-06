@@ -100,11 +100,11 @@ class App extends React.Component {
     return (
       <div>
         <h1>TypeAcer</h1>
-        <h3>Type this prompt:</h3>
+        <h4>Type this prompt:</h4>
       <div>
         <TextPrompt textPrompt={this.state.textPrompt.quote} />
       </div>
-      <div>
+      <div className="errorFlag">
         <ErrorFlag error={this.state.error} />
       </div>
       <div>
