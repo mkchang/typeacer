@@ -6,10 +6,16 @@ class Status extends React.Component {
     var record;
     if (this.props.record) {
       if (this.props.wpm === this.props.record) {
-        record = <div><p>{`New record!`}</p></div>;
+        record = (
+          <div>
+            <p>{`Results: ${this.props.wpm} words per minute!`}</p>
+            <p>{`New record!`}</p>
+          </div>
+        );
       } else {
         record = (
           <div>
+            <p>{`Results: ${this.props.wpm} words per minute!`}</p>
             <p>{'Not quite there yet, better luck next time!'}</p>  
             <p>{`Current record: ${this.props.record} words per minute`}</p>
           </div>
@@ -19,7 +25,6 @@ class Status extends React.Component {
       
     return (
       <div>
-          <p>{`Results: ${this.props.wpm} words per minute!`}</p>
           {record}
       </div>
     );

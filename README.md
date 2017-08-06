@@ -19,8 +19,10 @@
 - [x] Shows the record fastest wpm for that quote
 
 ### Advanced Content ###
+- [ ] Add bootstrap for styling
 - [ ] Saves and shows you your most common errors
-- [ ] Randomly chooses between existing quotes and new ones
+- [ ] Randomly chooses between existing quotes and new ones, defaults to old quotes if an unclean quote is found?
+- [ ] Add keystrokes per minute as well
 - [ ] Has a Flying Ace icon move across as you type
 - [ ] Has user login
 - [ ] Shows leaderboard of user wpm by prompt
