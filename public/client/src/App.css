@@ -1,5 +1,12 @@
+body {
+  padding: 0px 10px 10px;
+}
+
+h1 {
+  padding: 0px 0px 20px;
+}
+
 .TextPrompt {
-  padding: 0px 0px 10px;
   width: 400px;
 }
 

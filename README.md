@@ -21,8 +21,9 @@
 ### Advanced Content ###
 - [x] Add reactstrap for styling
 - [ ] Saves and shows you your most common errors
+- [ ] Add a reset button
 - [ ] Randomly chooses between existing quotes and new ones, defaults to old quotes if an unclean quote is found?
-- [ ] Add keystrokes per minute as well
+- [ ] Add keystrokes per minute
 - [ ] Has a Flying Ace icon move across as you type
 - [ ] Has user login
 - [ ] Shows leaderboard of user wpm by prompt
