@@ -4,6 +4,7 @@ import TextInput from './TextInput.jsx';
 import Status from './Status.jsx';
 import ErrorFlag from './ErrorFlag.jsx';
 import $ from 'jquery';
+import { Button } from 'reactstrap';
 
 class App extends React.Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class App extends React.Component {
       record: null
     }
     this.handleTextInput = this.handleTextInput.bind(this);
+    this.startNewRound = this.startNewRound.bind(this);
   }
 
   componentDidMount() {
@@ -96,6 +98,33 @@ class App extends React.Component {
     })
   }
 
+  startNewRound() {
+    this.setState({
+      started: false,
+      startTime: 0,
+      endTime: 0,
+      secondsElapsed: 0,
+      textInput: '',
+      textPrompt: {},
+      wpm: 0,
+      error: false,
+      record: null
+    }, () => {
+      $.ajax({
+        url: '/textPrompt',
+        success: (data) => {
+          this.setState({
+            textPrompt: data
+          })
+        },
+        error: (err) => {
+          console.log('GET /textPrompt failed ', err);
+        }
+      })
+    });
+
+  }
+
   render() {
     return (
       <div>
@@ -112,6 +141,9 @@ class App extends React.Component {
       </div>
       <div>
         <Status started={this.state.started} wpm={this.state.wpm} record={this.state.record} />
+      </div>
+      <div>
+        <Button color="primary" onClick={this.startNewRound}>Start a new round</Button>
       </div>
       </div>
     );

@@ -17,8 +17,8 @@ class TextInput extends React.Component {
     return (
       <div>
         <textarea 
-          rows="10" 
-          cols="50" 
+          rows="8" 
+          cols="45" 
           id="textarea" 
           placeholder="Start typing here!"
           value={this.state.value}

@@ -22,7 +22,7 @@
 - [x] Add reactstrap for styling
 - [x] bugs: double spaces are not obvious
 - [x] bugs: swearjar list reset
-- [ ] Add a reset button
+- [x] Add a reset button
 - [ ] Saves and shows you your most common errors
 - [ ] Randomly chooses between existing quotes and new ones, defaults to old quotes if an unclean quote is found?
 - [ ] Add keystrokes per minute
