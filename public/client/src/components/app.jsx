@@ -17,6 +17,7 @@ class App extends React.Component {
       textInput: '',
       textPrompt: {},
       wpm: 0,
+      kpm: 0,
       error: false,
       record: null,
       restart: true
@@ -50,6 +51,7 @@ class App extends React.Component {
           }, () => {
             this.setState({
               secondsElapsed: (this.state.endTime - this.state.startTime) / 1000,
+              kpm: Math.round(this.state.textPrompt.quote.length / ((this.state.endTime - this.state.startTime) / 60000)),
               wpm: Math.round(this.state.textPrompt.words / ((this.state.endTime - this.state.startTime) / 60000))
             }, () => {
               this.sendResults();
@@ -109,6 +111,7 @@ class App extends React.Component {
       textInput: '',
       textPrompt: {},
       wpm: 0,
+      kpm: 0,
       error: false,
       record: null,
       restart: true
@@ -143,7 +146,7 @@ class App extends React.Component {
         <TextInput handleTextInput={this.handleTextInput} restart={this.state.restart}/>
       </div>
       <div>
-        <Status started={this.state.started} wpm={this.state.wpm} record={this.state.record} />
+        <Status started={this.state.started} wpm={this.state.wpm} kpm={this.state.kpm} record={this.state.record} />
       </div>
       <div>
         <Button color="primary" onClick={this.startNewRound}>Start a new round</Button>

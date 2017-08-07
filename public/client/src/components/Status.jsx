@@ -9,14 +9,14 @@ class Status extends React.Component {
       if (this.props.wpm === this.props.record) {
         record = (
           <Alert color="info">
-            <p>{`Results: ${this.props.wpm} words per minute!`}</p>
+            <p>{`Results: ${this.props.wpm} words per minute at ${this.props.kpm} keystrokes per minute!`}</p>
             <p>{`New record!`}</p>
           </Alert>
         );
       } else {
         record = (
           <Alert color="info">
-            <p>{`Results: ${this.props.wpm} words per minute!`}</p>
+            <p>{`Results: ${this.props.wpm} words per minute at ${this.props.kpm} keystrokes per minute!`}</p>
             <p>{'Not quite there yet, better luck next time!'}</p>  
             <p>{`Current record: ${this.props.record} words per minute`}</p>
           </Alert>
