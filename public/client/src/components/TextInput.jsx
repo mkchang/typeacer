@@ -21,7 +21,7 @@ class TextInput extends React.Component {
           cols="45" 
           id="textarea" 
           placeholder="Start typing here!"
-          value={this.state.value}
+          value={this.props.restart ? '' : this.state.value}
           onChange={e => {
             this.handleChange(e);
             this.props.handleTextInput(e);

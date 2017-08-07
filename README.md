@@ -23,7 +23,9 @@
 - [x] bugs: double spaces are not obvious
 - [x] bugs: swearjar list reset
 - [x] Add a reset button
+- [x] Clear textInput when reset button is hit
 - [ ] Saves and shows you your most common errors
+- [ ] Error highlighting
 - [ ] Randomly chooses between existing quotes and new ones, defaults to old quotes if an unclean quote is found?
 - [ ] Add keystrokes per minute
 - [ ] Has a Flying Ace icon move across as you type

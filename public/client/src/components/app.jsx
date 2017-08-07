@@ -18,7 +18,8 @@ class App extends React.Component {
       textPrompt: {},
       wpm: 0,
       error: false,
-      record: null
+      record: null,
+      restart: true
     }
     this.handleTextInput = this.handleTextInput.bind(this);
     this.startNewRound = this.startNewRound.bind(this);
@@ -63,6 +64,7 @@ class App extends React.Component {
         }
       } else {
         this.setState({
+          restart: false,
           started: true,
           startTime: Date.now()
         });
@@ -108,7 +110,8 @@ class App extends React.Component {
       textPrompt: {},
       wpm: 0,
       error: false,
-      record: null
+      record: null,
+      restart: true
     }, () => {
       $.ajax({
         url: '/textPrompt',
@@ -137,7 +140,7 @@ class App extends React.Component {
         <ErrorFlag error={this.state.error} />
       </div>
       <div>
-        <TextInput handleTextInput={this.handleTextInput}/>
+        <TextInput handleTextInput={this.handleTextInput} restart={this.state.restart}/>
       </div>
       <div>
         <Status started={this.state.started} wpm={this.state.wpm} record={this.state.record} />

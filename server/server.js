@@ -14,7 +14,7 @@ app.get('/textPrompt', function(req, res, next) {
     res.status(200).send({quote: data.quote, words: data.words})
     next();
   });
-  // res.status(200).send({quote: 'This is a test', words: 4});
+  // res.status(200).send({quote: 'Perl - The only language that looks the same before and after RSA encryption.', words: 14});
   // next();
 });
 

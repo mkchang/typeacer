@@ -23,6 +23,7 @@ module.exports.getCleanQuote = (callback) => {
   var cleanLoop = () => {
     module.exports.getQuote((data) => {
       if (swearjar.profane(data.quote)) {
+        console.log('swearjar triggered, retrying API call');
         cleanLoop();
       } else {
         callback(data);
