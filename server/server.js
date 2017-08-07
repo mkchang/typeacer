@@ -21,6 +21,7 @@ app.get('/textPrompt', function(req, res, next) {
 app.post('/results', function(req, res, next) {
   var quote = req.body.quote;
   var wpm = req.body.wpm;
+  var kpm = req.body.kpm;
   Result.find({quote: quote})
   .then((result) => {
     result = result[0];
@@ -28,11 +29,11 @@ app.post('/results', function(req, res, next) {
     if (result) {
       throw result;
     }
-    var result = new Result({quote: quote, wpm: wpm})
+    var result = new Result({quote: quote, wpm: wpm, kpm: kpm})
     result.save((err, result) => {
       if (err) throw err;
       console.log('saved new result: ', result);
-      res.status(201).send({wpm: wpm});
+      res.status(201).send({wpm: wpm, kpm: kpm});
     });
   })
   .error((err) => {
@@ -41,13 +42,13 @@ app.post('/results', function(req, res, next) {
   })
   .catch((result) => {
     if (wpm > result.wpm) {
-      result.update({wpm: wpm}, (err) => {
+      result.update({wpm: wpm, kpm: kpm}, (err) => {
         if (err) throw err;
         console.log(`updated ${result.quote} to faster wpm: ${wpm}`);
-        res.status(201).send({wpm: wpm});
+        res.status(201).send({wpm: wpm, kpm: kpm});
       })
     } else {
-      res.status(201).send({wpm: result.wpm});
+      res.status(201).send({wpm: result.wpm, kpm: result.kpm});
     }
   })
 })

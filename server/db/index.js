@@ -15,7 +15,8 @@ db.once('open', function() {
 
 var resultsSchema = new Schema({
   quote: String,
-  wpm: Number
+  wpm: Number,
+  kpm: Number
 });
 
 var Result = mongoose.model('Result', resultsSchema);

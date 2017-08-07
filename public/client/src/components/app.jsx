@@ -87,13 +87,14 @@ class App extends React.Component {
       method: 'POST',
       data: JSON.stringify({
         quote: this.state.textPrompt.quote,
-        wpm: this.state.wpm
+        wpm: this.state.wpm,
+        kpm: this.state.kpm
       }),
       contentType: 'application/json',
       success: (data) => {
         console.log('POST success: ', data);
         this.setState({
-            record: data.wpm
+            record: {wpm: data.wpm, kpm: data.kpm}
           });
       },
       error: (err) => {
