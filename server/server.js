@@ -53,7 +53,8 @@ app.post('/results', function(req, res, next) {
   })
 })
 
-app.listen(process.env.PORT, () => {
-  console.log('Server listening on port ' + process.env.PORT);
+var port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log('Server listening on port ' + port);
 });
 

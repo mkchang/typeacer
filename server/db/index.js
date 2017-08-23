@@ -6,7 +6,7 @@ mongoose.Promise = require('bluebird');
 //   useMongoClient: true,
 // })
 
-mongoose.connect('mongodb://heroku_vvhgdj3v:sea4ig94ve1dun6t4qjkiqj0vr@ds163721.mlab.com:63721/heroku_vvhgdj3v', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/typeacer', {
   useMongoClient: true,
 })
 
