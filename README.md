@@ -1,4 +1,5 @@
-# TypeAcer: an hrsf80-mvp project 
+# TypeAcer
+> Simple React/Node.js typing game, helping you ace your typing and increase your words per minute
 
 ## Tech Stack ##
 - Client: React
@@ -43,13 +44,7 @@ Default quote API is from [Storm Consultancy](http://quotes.stormconsultancy.co.
 Note: this is not a "clean" set of quotes, so npm package [swearjar](https://www.npmjs.com/package/swearjar) is used. 
 Note 2: depending on your tastes, this may not be a fully inclusive list of profanity, see swearjar docs on editing the default list or providing your own.
 
-## Press Release ##
-
-### Heading ###
-  > TypeAcer
-
-### Sub-Heading ###
-  > Helping you ace your typing and increase your words per minute.
+## About TypeAcer ##
 
 ### Summary ###
   > TypeAcer provides a fun, engaging opportunity for anyone to practice their typing. It's easy to start, and the bite sized sessions lets you flexibly fit it into your schedule. Each session provides you a random quote of text, which you copy while trying to minimize typing errors. At the end, TypeAcer will provide you with a speed and error summary.
