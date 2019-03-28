@@ -29,6 +29,7 @@ module.exports = {
   resolve: {
     modules: [
       path.resolve(__dirname, "public/client/src"), 
+      path.resolve(__dirname, "public/client/src/components"), 
       path.resolve(__dirname, "node_modules")
     ]
   }
